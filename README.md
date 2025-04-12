@@ -1,8 +1,6 @@
 # OpenHouse
 **House Price Prediction Test**
 
-**Problem Description**
-
 Build a complete machine learning pipeline using the provided housing data to estimate home sale prices based on various property characteristics. Your primary objective is to develop a robust prediction model. It is recommended that the final model use linear regression, although using a different model will not be rewarded or punished.
 
 Your solution will be evaluated on the following areas:
