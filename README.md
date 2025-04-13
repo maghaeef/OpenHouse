@@ -1,14 +1,58 @@
-# OpenHouse
-**House Price Prediction Test**
+# 🏠 House Price Analysis Pipeline
 
-Build a complete machine learning pipeline using the provided housing data to estimate home sale prices based on various property characteristics. Your primary objective is to develop a robust prediction model. It is recommended that the final model use linear regression, although using a different model will not be rewarded or punished.
+This repository provides a complete machine learning pipeline for analyzing and predicting house sale prices. The pipeline includes data loading, preprocessing, feature engineering, feature selection using Lasso regression, model training, and evaluation.
 
-Your solution will be evaluated on the following areas:
-1. **Data Handling and Exploration:** Import, clean, and prepare the dataset for analysis. Perform exploratory data analysis to identify trends and patterns.
-2. **Feature Engineering:** Create and select meaningful features from the dataset.
-3. **Modeling:** Develop your prediction model, applying best practices in model development.
-4. **Evaluation:** Assess the performance of your model using appropriate metrics.
+## 📦 Installation
 
-Your approach should demonstrate technical proficiency while reflecting a thoughtful application of sound modeling practices throughout the entire pipeline. Every assumption and modification made during the process must be clearly outlined. 
-As output, a jupyter notebook-based project is preferred, but raw python is acceptable as well. Ensure all relevant outputs are included, the code is runnable, and any required packages are present in a requirements file.
+Before running the code, install the required libraries using the following command:
 
+```bash
+!conda install -y -c conda-forge pandas numpy matplotlib seaborn scikit-learn -q
+```
+
+## 📁 Project Structure
+
+- `HousePriceAnalysis` class: Handles the entire ML workflow from preprocessing to model evaluation.
+- `dataset.csv`: Input dataset file (not included).
+- `main block`: Demonstrates the usage of the pipeline with a CSV file.
+
+## 🚀 How to Run
+
+1. Place your house sales dataset in the working directory and name it `dataset.csv`.
+2. Run the script. The pipeline will:
+   - Preprocess the data
+   - Engineer new features
+   - Apply Lasso for feature selection
+   - Find the optimal feature threshold
+   - Train and evaluate a linear regression model
+
+## 📊 Features Used
+
+- Numeric: LotArea, GrLivArea, TotalBsmtSF, GarageArea, etc.
+- Engineered: TotalBath, HouseAge, Quality_Area, Quality_Age
+- Categorical: Alley, LotType, BldgType, HouseStyle, SaleType, SaleCondition
+
+## 📈 Evaluation Metrics
+
+- R² Score
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+
+## 📉 Visualizations
+
+- Correlation Matrix
+- Feature Importance from Lasso
+- Selected Feature Scatter Plots
+- Model Performance Plots (Actual vs Predicted, Residuals)
+
+## 📌 Notes
+
+- Ensure your dataset is clean and named appropriately.
+- Log transformations are applied to handle skewness.
+- The pipeline uses `RobustScaler` and `OneHotEncoder` for scaling and encoding respectively.
+
+---
+
+**Author**: Mohammad Aghaee
+**License**: MIT
